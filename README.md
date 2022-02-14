@@ -1,1 +1,1 @@
-i love puppies
+i love dogs
