@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body {
+  background: pink;
+  font-family: 'Merriweather';
+}
+
+header {
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-color: rosybrown;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px black;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.message-container{
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    background-color: lavenderblush;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px black;
+}
+
+#general-image {
+    width: 15%;
+    margin-left: 10%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.message-buttons {
+    display: flex;
+    background-color: lavenderblush;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 70px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+div.form {
+    display: block;
+    text-align: center;
+    background-color: lavenderblush;
+    margin-top: 50px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+.form-input {
+    display: flex;
+    justify-content: end;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
