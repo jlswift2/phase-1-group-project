@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function(){
         .then
     })
 
-    // Spooky Jokes Button
-    const spookyButton = document.getElementById("spooky-button");
-    spookyButton.addEventListener("click", function(){
-        fetch("")
-        .then
-        .then
+    // Misc Jokes Button
+    const miscButton = document.getElementById("misc-button");
+    miscButton.addEventListener("click", function(){
+        fetch("https://v2.jokeapi.dev/joke/Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single")
+        .then(response => response.json())
+        .then(miscJokes => renderJokes(miscJokes))
     })
 
     function renderJokes(jokes){
