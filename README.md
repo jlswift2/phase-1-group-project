@@ -30,3 +30,28 @@ example call = https://v2.jokeapi.dev/joke/Programming?type=single
 
 
 Programming, Pun, Spooky
+
+
+
+(DOMContentLoaded, {
+
+    find button, assign a var 
+    assign listener to that var (fetch for that type of joke (data => callback function))
+
+    function renderJoke(data){
+        find where
+        put it in
+        ta-da
+    }
+
+    find form 
+    add event listener(sub, sendToFriend)
+
+    function sendToFriend(e){
+        e.preventDefault()
+        new obj
+        post obj
+    }
+
+
+})
