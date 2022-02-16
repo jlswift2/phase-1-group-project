@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function(){
     // Puns Button
     const punButton = document.getElementById("pun-button");
     punButton.addEventListener("click", function(){
-        fetch("")
-        .then
-        .then
+        fetch("https://v2.jokeapi.dev/joke/Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single")
+        .then(response => response.json())
+        .then(punJokes => renderJokes(punJokes))
     })
 
     // Misc Jokes Button
