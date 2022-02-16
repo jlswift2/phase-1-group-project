@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "friend-email": "help@yahoo.com",
+      "friend-name": "Justin",
+      "sender-name": "Woody"
+    }
+  ]
+}
