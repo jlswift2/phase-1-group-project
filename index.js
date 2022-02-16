@@ -28,4 +28,38 @@ document.addEventListener("DOMContentLoaded", function(){
         const jokeDisplay = document.getElementById("joke-content")
         jokeDisplay.innerHTML = jokes.joke;
     }
+
+    //Creating submission form
+    const sendForm = document.querySelector('#send-joke-form')
+    sendForm.addEventListener("submit", (e) => saveInfo(e))
+
+    function saveInfo(e) {
+        e.preventDefault()
+        let friendEmail = e.target["friend-email"].value
+        let friendName = e.target["friend-name"].value
+        let senderName = e.target["your-name"].value
+
+        let newUser = {
+            "id": "",
+            "friend-email": friendEmail,
+            "friend-name": friendName,
+            "sender-name": senderName
+        }
+
+        //fetch(POST) request
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(newUser)
+        })
+        .then(resp => resp.json())
+        .then(() => {
+            sendForm.reset();
+            alert("LOL GOTCHA I WILL STEAL YOUR SHIT")
+        })
+    }
+
 })
