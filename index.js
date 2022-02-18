@@ -58,8 +58,7 @@ document.addEventListener("DOMContentLoaded", function(){
         .then(resp => resp.json())
         .then(() => {
             sendForm.reset();
-            alert("LOL GOTCHA I WILL STEAL YOUR SHIT")
+            alert("LOL GOTCHA I WILL STEAL YOUR IDENTITY")
         })
     }
-
 })
