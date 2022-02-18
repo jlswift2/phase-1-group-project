@@ -7,52 +7,62 @@
   </head>
 
   <body>
-    <header>
-      <h1>Hey, I got a good one...</h1>
-    </header>
+    <section>
+      <div class="background-image">
 
-    <main>
-      <!-- ADD BUTTONS HERE -->
-      <div class="joke-buttons">
-        <button class="button" id="programming-button">Programming</button>
-        <button class="button" id="pun-button">Pun</button>
-        <button class="button" id="misc-button">Miscellaneous</button>
-      </div>
-      
-      <div class="joke-container">
-        <img
-          id="general-image"
-          alt="General placeholder image for fun"
-          src="assets/Anoures.jpg"
-        />
-        <!-- ADD OUR JOKE HERE -->
-        <h2 id="joke-content">WE WILL DELETE THIS. THIS IS THE MESSAGE</h2>
+        <main>
+          <div class="right">
+            <header>
+              <h1>@jokemail</h1>
+            </header> 
+            
+            <div class="joke-buttons">
+              <button class="button" id="programming-button">Programming</button>
+              <button class="button" id="pun-button">Pun</button>
+              <button class="button" id="misc-button">Miscellaneous</button>
+            </div>
+            
+            <div class="joke-container">
+              <h2 id="joke-content">Pick a button for a joke!</h2>
+            </div>
 
-      </div>
+            <div class="form">
+              <h3>Send a joke to your friend!</h3>
+              
+              <form id="send-joke-form">
+                <div class="form-input">
+                  <label for="friend-email">Your friend's email address:</label>
+                  <input type="email" id="friend-email" />
+                </div>
 
-      <div class="form">
-        <h3>Send a joke to your friend!</h3>
-        
-        <form id="send-joke-form">
-          <div class="form-input">
-            <label for="friend-email">Your friend's email address:</label>
-            <input type="email" id="friend-email" />
+                <div class="form-input">
+                  <label for="friend-name">Your friend's name:</label>
+                  <input type="text" id="friend-name" />
+                </div>
+
+                <div class="form-input">
+                  <label for="your-name">Your name:</label>
+                  <input type="text" id="your-name" />
+                </div>
+
+                <div id="submit-button">
+                  <button type="submit" class="button">Send joke!</button>
+                </div>
+                
+                <div class="wrapper">
+                  <div class="neon-wrapper">
+                    <span class="txt">LOL</span>
+                    <span class="gradient"></span>
+                    <span class="dodge"></span>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
           </div>
-
-          <div class="form-input">
-            <label for="friend-name">Your friend's name:</label>
-            <input type="text" id="friend-name" />
-          </div>
-
-          <div class="form-input">
-            <label for="your-name">Your name:</label>
-            <input type="text" id="your-name" />
-          </div>
-          <div class="button">
-            <button type="submit">Send joke!</button>
-        </form>
-        </div>
+         </main>
       </div>
-    </main>
+    </section>
   </body>
 </html>
