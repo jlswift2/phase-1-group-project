@@ -1,38 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-  background: pink;
-  font-family: 'Merriweather';
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.background-image {
+  background-image: url("https://images.unsplash.com/photo-1576515652031-fc429bab6503?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 header {
   margin-top: 30px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: rosybrown;
-  border: 1px solid black;
-  box-shadow: 4px 4px 4px black;
+  background-color: transparent;
+  color: #da765b; 
+  font-size: 48px; 
+  font-family: 'Merriweather', serif;
+  text-shadow: 0.5px 0.5px #000000;
 }
 
-main {
-    margin-top: 20px;
+
+.right {
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    height: 100vh;
+    position:absolute;
+    right: 0px;
 }
+
 
 .joke-container{
     min-height: fit-content;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    background-color: lavenderblush;
+    background-color: transparent;
     padding-top: 20px;
+    padding-left: 10px;
     padding-bottom: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
     border: 1px solid black;
-    box-shadow: 3px 3px 3px black;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px black;
 }
 
 #general-image {
@@ -44,26 +70,76 @@ main {
 
 .joke-buttons {
     display: flex;
-    background-color: lavenderblush;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 70px;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px black;
+  }
+
+  
+.button {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
 }
 
 div.form {
     display: block;
     text-align: center;
-    background-color: lavenderblush;
+    background-color: black;
     margin-top: 50px;
-    margin-left: 30%;
-    margin-right: 30%;
-    padding-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 10px;
     border: 1px solid black;
+    border-radius: 8px;
     box-shadow: 2px 2px 2px black;
+    /* transform: rotate(2deg); */
+    color: lavenderblush;
 }
 
 .form-input {
@@ -71,9 +147,69 @@ div.form {
     justify-content: end;
 }
 
+h3 {
+  margin-top: 20px;
+}
+
 form {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     text-align: left;
+}
+
+
+#submit-button {
+  padding-top: 30px;
+}
+
+.wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.txt {
+  color: white;
+  background: black;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+.txt::before {
+  content: "LOL";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter:blur(3px);
+}
+.neon-wrapper {
+  display: inline-flex;
+  filter: brightness(200%);
+  overflow: hidden;
+}
+.gradient {
+  background: linear-gradient(110.46410235197288deg, rgba(240, 152, 11,1) 5.911420204978038%,rgba(124, 111, 211,1) 95.95534407027817%) ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+}
+.dodge {
+  background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-dodge;
+  animation: dodge-area 3s linear infinite;
+}
+@keyframes dodge-area {
+  to {
+      transform: translate(50%,50%);
+  }
 }
